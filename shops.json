@@ -11,17 +11,18 @@
     "likes": 0,
     "submitter": "测试用户"
   }
+  
+  {
+    "name": "深圳大中华bit次元",
+    "province": "广东省",
+    "city": "深圳市",
+    "district": "福田区",
+    "address": "深圳市福田区福华一路1号G层(会展中心地铁站A口步行100米)",
+    "lat": 22.536022,
+    "lng": 114.062265,
+    "images": ["images/深圳大中华bit次元1.jpg", "images/深圳大中华bit次元2.jpg"],
+    "likes": 0,
+    "submitter": "doya16"
+  }
 ]
 
-{
-  "name": "深圳大中华bit次元",
-  "province": "广东省",
-  "city": "深圳市",
-  "district": "福田区",
-  "address": "深圳市福田区福华一路1号G层(会展中心地铁站A口步行100米)",
-  "lat": 22.536022,
-  "lng": 114.062265,
-  "images": ["images/深圳大中华bit次元1.jpg", "images/深圳大中华bit次元2.jpg"],
-  "likes": 0,
-  "submitter": "doya16"
-}
