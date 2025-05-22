@@ -25,11 +25,11 @@ fetch('shops.json')
 
         const infoHtml = `
           <div style="max-width: 300px; max-height: 300px; overflow-y: auto; font-size: 14px; line-height: 1.5;">
-            <h3 style="margin: 0 0 5px;">\${shop.name}</h3>
-            <p><strong>地址：</strong>\${shop.address}</p>
-            <p><strong>提交人：</strong>\${shop.submitter}</p>
-            <p><strong>点赞：</strong>\${shop.likes}</p>
-            \${imagesHtml}
+            <h3 style="margin: 0 0 5px;">${shop.name}</h3>
+            <p><strong>地址：</strong>${shop.address}</p>
+            <p><strong>提交人：</strong>${shop.submitter}</p>
+            <p><strong>点赞：</strong>${shop.likes}</p>
+            ${imagesHtml}
           </div>
         `;
 
