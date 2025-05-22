@@ -20,7 +20,7 @@ fetch('shops.json')
 
       marker.on('click', () => {
         const imagesHtml = shop.images.map(img =>
-          `<img src="\${img}" alt="图片" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin: 5px 0;">`
+          `<img src="${img}" alt="图片" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin: 5px 0;">`
         ).join('');
 
         const infoHtml = `
