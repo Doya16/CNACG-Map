@@ -1,7 +1,11 @@
+
+let map, markers = [], shopsData = [];
+
 fetch('shops.json')
   .then(response => response.json())
   .then(shops => {
-    const map = new AMap.Map('map', {
+    shopsData = shops;
+    map = new AMap.Map('map', {
       zoom: 5,
       center: [105.5, 35.5]
     });
@@ -12,21 +16,20 @@ fetch('shops.json')
         title: shop.name
       });
       marker.setMap(map);
+      markers.push(marker);
 
       marker.on('click', () => {
-        // 构建图片展示 HTML（限制宽高 + 轮播式堆叠）
         const imagesHtml = shop.images.map(img =>
-          `<img src="${img}" alt="图片" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin: 5px 0;">`
+          `<img src="\${img}" alt="图片" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin: 5px 0;">`
         ).join('');
 
-        // 构建信息窗体内容 HTML
         const infoHtml = `
           <div style="max-width: 300px; max-height: 300px; overflow-y: auto; font-size: 14px; line-height: 1.5;">
-            <h3 style="margin: 0 0 5px;">${shop.name}</h3>
-            <p><strong>地址：</strong>${shop.address}</p>
-            <p><strong>提交人：</strong>${shop.submitter}</p>
-            <p><strong>点赞：</strong>${shop.likes}</p>
-            ${imagesHtml}
+            <h3 style="margin: 0 0 5px;">\${shop.name}</h3>
+            <p><strong>地址：</strong>\${shop.address}</p>
+            <p><strong>提交人：</strong>\${shop.submitter}</p>
+            <p><strong>点赞：</strong>\${shop.likes}</p>
+            \${imagesHtml}
           </div>
         `;
 
@@ -34,8 +37,25 @@ fetch('shops.json')
           content: infoHtml,
           offset: new AMap.Pixel(0, -30)
         });
-
         infoWindow.open(map, marker.getPosition());
       });
     });
   });
+
+function handleSearch() {
+  const keyword = document.getElementById('searchInput').value.trim();
+  if (!keyword) return;
+
+  const result = shopsData.find(shop =>
+    shop.name.includes(keyword) ||
+    shop.city.includes(keyword) ||
+    shop.district.includes(keyword)
+  );
+
+  if (result) {
+    map.setZoom(15);
+    map.setCenter([result.lng, result.lat]);
+  } else {
+    alert("未找到匹配的商店，请尝试其他关键词！");
+  }
+}
