@@ -4,8 +4,7 @@ let map, markers = [], shopsData = [];
 fetch('shops.json')
   .then(response => response.json())
   .then(shops => {
-    shopsData = shops;
-    map = new AMap.Map('map', {
+    const map = new AMap.Map('map', {
       zoom: 5,
       center: [105.5, 35.5]
     });
@@ -16,15 +15,13 @@ fetch('shops.json')
         title: shop.name
       });
       marker.setMap(map);
-      markers.push(marker);
 
       marker.on('click', () => {
-        const imagesHtml = shop.images.map(img =>
-          `<img src="${img}" alt="图片" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin: 5px 0;">`
-        ).join('');
-
+        // 构建图片HTML
+        const imagesHtml = shop.images.map(img => `<img src="${img}" alt="图片" style="max-width:200px;margin:5px;">`).join('');
+        
         const infoHtml = `
-          <div>
+          <div style="max-width:300px;">
             <h3>${shop.name}</h3>
             <p><strong>地址：</strong>${shop.address}</p>
             <p><strong>提交人：</strong>${shop.submitter}</p>
@@ -32,7 +29,6 @@ fetch('shops.json')
             ${imagesHtml}
           </div>
         `;
-
 
         const infoWindow = new AMap.InfoWindow({
           content: infoHtml,
@@ -42,6 +38,7 @@ fetch('shops.json')
       });
     });
   });
+
 
 function handleSearch() {
   const keyword = document.getElementById('searchInput').value.trim();
