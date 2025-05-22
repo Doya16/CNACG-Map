@@ -33,7 +33,7 @@
     "address": "滨海大道2008号欢乐海岸曲水湾7A、7B栋",
     "lat": 22.524242,
     "lng": 113.990944,
-    "images": [],
+    "images": ["images/深圳奇谷米1.jpg", "images/深深圳奇谷米2.jpg"],
     "likes": 0,
     "submitter": "doya16"
   },
@@ -46,7 +46,7 @@
     "address": "南京东路340号(南京东路地铁站1号口步行70米)",
     "lat": 31.237161,
     "lng": 121.483254,
-    "images": [],
+    "images": ["images/上海百联ZX1.png", "images/上海百联ZX2.webp"],
     "likes": 0,
     "submitter": "doya16"
   }
