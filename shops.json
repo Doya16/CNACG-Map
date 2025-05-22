@@ -1,30 +1,14 @@
 [
   {
-    "name": "二次元周边店·广州天河",
-    "province": "广东省",
-    "city": "广州市",
-    "district": "天河区",
-    "address": "天河路123号动漫商城2楼",
-    "lat": 23.1291,
-    "lng": 113.2644,
-    "images": [
-      "images/guangzhou1.jpg"
-    ],
-    "likes": 5,
-    "submitter": "JayChou"
-  },
-  {
-    "name": "漫友精品店·上海徐汇",
-    "province": "上海市",
-    "city": "上海市",
-    "district": "徐汇区",
-    "address": "虹桥路88号3楼",
-    "lat": 31.1924,
-    "lng": 121.4365,
-    "images": [
-      "images/shanghai1.jpg"
-    ],
-    "likes": 3,
-    "submitter": "Luna"
+    "name": "Test 动漫店·北京海淀",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "海淀区",
+    "address": "五道口动漫城",
+    "lat": 39.990464,
+    "lng": 116.326443,
+    "images": [],
+    "likes": 0,
+    "submitter": "测试用户"
   }
 ]
