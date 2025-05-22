@@ -36,6 +36,19 @@
     "images": [],
     "likes": 0,
     "submitter": "doya16"
+  },
+
+  {
+    "name": "上海百联ZX",
+    "province": "上海市",
+    "city": "上海市",
+    "district": "杨浦区",
+    "address": "南京东路340号(南京东路地铁站1号口步行70米)",
+    "lat": 31.237161,
+    "lng": 121.483254,
+    "images": [],
+    "likes": 0,
+    "submitter": "doya16"
   }
 
 ]
